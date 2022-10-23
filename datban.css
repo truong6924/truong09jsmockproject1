@@ -1,0 +1,51 @@
+*, .html{
+    margin: 0;
+    padding: 0;
+}
+.please{
+    border: 2px solid red;
+    width: 40%;
+    height: 600px;
+    margin: 0 auto;
+    background-color: beige;
+    text-align: center;
+}
+.thongtin{
+    background-image: linear-gradient(to right, rgb(99, 227, 199), rgb(182, 139, 242));
+    border: 2px solid;
+    width: 350px;
+    height: 400px;
+    box-sizing: border-box;
+    padding: 40px;
+    border-radius: 5px;
+    color: black;
+    margin: 40px auto;
+    text-align: left;
+}
+.thongtin input{
+    font-size: 20px;
+}
+.thongtin textarea{
+    width: 255px;
+    height: 70px;
+}
+h3{
+    margin-top: 10px;
+    color: tomato;
+    text-align: center;
+    font-size: 40px;
+}
+.please button{
+    position: relative;
+    left: 35%;
+    display: block;
+    height: 45px;
+    width: 60px;
+    background-color: rgb(215, 250, 221);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 3px 3px tomato;
+}

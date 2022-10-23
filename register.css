@@ -1,0 +1,53 @@
+*,html{
+    margin: 0;
+    padding: 0;
+}
+.container{
+background-image: linear-gradient(to right, yellow,rgb(236, 105, 195));
+border: 2px solid;
+width: 350px;
+height: 550px;
+box-sizing: border-box;
+padding: 30px;
+border-radius: 5px;
+color: black;
+margin: 50px auto;
+}
+.container input{
+    margin: 5px 0px;
+    width: 250px;
+    height: 30px;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+.container button{
+    position: relative;
+    left: 30%;
+    display: block;
+    height: 35px;
+    background-color: antiquewhite;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 3px 3px tomato;
+} 
+.container button:hover{
+    cursor: pointer;
+    background-image: linear-gradient(to right, red, yellow);
+    outline: none;
+}
+.fa-solid {
+    position: relative;
+    right: 30px;
+}
+.okAcount{
+    position: relative;
+    left: 0px;
+}
+a{
+    text-decoration: none;
+}

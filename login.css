@@ -1,0 +1,46 @@
+*,.html {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    background-image: linear-gradient(to right, yellow, rgb(182, 139, 242));
+    border: 2px solid;
+    width: 350px;
+    height: 400px;
+    box-sizing: border-box;
+    padding: 40px;
+    border-radius: 5px;
+    color: black;
+    margin: 80px auto;
+}
+.container input {
+    margin: 5px 0px;
+    width: 230px;
+    height: 30px;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+.container button {
+    position: relative;
+    left: 30%;
+    display: block;
+    height: 35px;
+    background-color: antiquewhite;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 3px 3px tomato;
+}
+.container button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to right, red, yellow);
+    outline: none;
+}
+.fa-solid {
+    position: relative;
+    right: 30px;
+}   

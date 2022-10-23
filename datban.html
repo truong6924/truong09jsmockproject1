@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/datban.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+      <div class="please">
+        <h3>Đặt bàn</h3>
+        <p>Cần thông tin về nhà hàng của chúng tôi, hoặc cách đặt bàn ? <br>
+          Để lại cho chúng tôi một tin nhắn chúng tôi sẽ liên lạc lại với bạn</p>
+          <div class="thongtin">
+            <i class="fa-solid fa-user"></i>
+            <label for="username">Họ và tên</label> <br>
+            <input></input> <br>
+            <i class="fa-solid fa-phone"></i>
+            <label for="sđt">Số điện thoại</label> <br>
+            <input></input> <br>
+            <i class="fa-solid fa-envelope"></i>
+            <label for="Email">Email</label> <br>
+            <input></input> <br>
+            <i class="fa-light fa-message-dots"></i>
+            
+            <label for="nội dung">Nội dung liên hệ</label> <br>
+            <textarea></textarea> <br>
+            <button id="button" onclick="content()">Gửi đi</button>
+          </div>
+      </div>
+      <script>
+        function content() {
+          alert("Bạn đã đặt bàn thành công")
+          window.location.href= "/index2.html"
+        }
+      </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  </body>
+</html>

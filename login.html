@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+</head>
+<body>
+  <div class="container">
+    <div class="body">
+      <label for="">Tên đăng nhập</label> <br>
+      <input type="text" id="username" placeholder="Username"> <br>
+      <span class="errorUserName" id="errorUserName" style="display:none">Username sai định dạng</span>
+      <label for="password">Mật khẩu</label> <br>
+      <input id="password" type="password" placeholder="Password"> 
+      <i id="icon" onclick="showPassword()" class="fa-solid fa-eye"></i>
+      <span class="error" id="error" style="display:none">Password sai định dạng</span>
+      <button id="button" onclick="checkUserNamePass()">Đăng nhập</button>
+      <div class="noAcount">
+        Bạn chưa có tài khoản. <a href="/register.html">Đăng ký</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    function checkUserNamePass() {
+      let username = document.getElementById("username").value;
+      let password = document.getElementById("password").value;
+      let arrAcount = JSON.parse(localStorage.getItem("information"));
+      let arrUsername = [];
+      let arrPassword = [];
+      for (let i = 0; i < arrAcount.length; i++) {
+        arrUsername.push(arrAcount[i].username);
+        arrPassword.push(arrAcount[i].password);
+      }
+      console.log(username);
+      console.log(password);
+      console.log(arrAcount);
+      console.log(arrUsername);
+      console.log(arrPassword);
+      if (arrUsername.indexOf(username) != -1) {
+        console.log(111);
+        let index = arrUsername.indexOf(username);
+        if (arrPassword[index] == password) {
+          localStorage.setItem("indexUser",index)
+          window.location.href = "/index2.html";
+        }
+      } else {
+        return false;
+      }
+    }
+    function showPassword() {
+      let password = document.getElementById("password");
+      let icon = document.getElementById("icon");
+      if (password.type == "password") {
+        password.type = "text";
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+      } else {
+        password.type = "password";
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
+      }
+    }
+    function showConfirmPassword() {
+      console.log("111");
+      let showConfirmPassword = document.getElementById("confirmPassword");
+      let iconClose = document.getElementById("iconClose");
+      if (showConfirmPassword.type == "password") {
+        showConfirmPassword.type = "text";
+        iconClose.classList.remove("fa-eye");
+        iconClose.classList.add("fa-eye-slash");
+      } else {
+        showConfirmPassword.type = "password";
+        iconClose.classList.remove("fa-eye-slash");
+        iconClose.classList.add("fa-eye");
+      }
+    }
+  </script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+</html>
